@@ -156,7 +156,7 @@ submitButtons.forEach((submitButton) => {
     let isValid = true;
 
     const phoneDigits = phone.value.replace(/\D/g, "");
-    if (phoneDigits.length < 10) {
+    if (phoneDigits.length < 11) {
       showPhoneError();
       isValid = false;
 

@@ -13,7 +13,7 @@
   }
   .services__element,
   .services__element-withoutLine,
-  .services__element-withoutLine {
+  .services__element-withoutLine, .services__last-element{
     padding-top: clamp(40px, 5vw, 66px);
     height: auto;
     padding-bottom: 20px;
@@ -103,5 +103,7 @@
 
   .services__text-desc{
     /* hyphens: auto; */
+    display: none;
   }
+
 }

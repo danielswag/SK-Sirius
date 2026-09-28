@@ -2,6 +2,8 @@
    MINI-DESKTOP
 ========================= */
 
+
+
 @media (max-width: 1440px) {
   .request__container,
   .requestBottom__container,
@@ -255,7 +257,7 @@
    SMALL MOBILE
 ========================= */
 
-@media (max-width: 480px),(min-width: 360px) {
+@media (max-width: 480px) {
   .request__container,
   .requestBottom__container,
   .inputData__container,

@@ -27,6 +27,7 @@
   height: 122px;
   display: flex;
   align-items: center;
+  /* background-color: rgb(244, 244, 244); */
 }
 
 .request__bottom-file:hover{opacity: 0.8;}

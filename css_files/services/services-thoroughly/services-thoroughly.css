@@ -1,0 +1,261 @@
+.description-thoroughly {
+  background-color: rgb(28, 26, 26);
+  padding-bottom: 96px;
+  border-radius: 0 0 70px 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-thoroughly__section {
+  background-color: #ffffff;
+  padding-block: 96px 80px;
+}
+
+.header-thoroughly__container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  /* column-gap: 16px; */
+
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+/* Верхняя часть: навигация + заголовок */
+
+.block__row {
+  grid-column: 3 / 14;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 16px;
+
+  margin: 0;
+}
+
+.block__nav {
+  grid-column: 1 / 6;
+  font-family: var(--font-main);
+  font-weight: 700;
+}
+
+.btn {
+  position: relative;
+  text-decoration: none;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* .menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+} */
+
+.menu li:first-child {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu li:first-child::after {
+  content: "◆";
+  margin-left: 16px;
+  font-size: 9px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu li {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* Заголовок */
+
+.block__title {
+  grid-column: 1 / 10;
+
+  margin: 20px 0 0;
+
+  font-size: 64px;
+  font-family: "SFT Schrifted";
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+/* Описание */
+
+.block__desc {
+  grid-column: 10 / 15;
+
+  margin-top: 48px;
+}
+
+.block__desc p {
+  margin: 0;
+
+  font-size: 25px;
+  line-height: 1.1;
+  font-family: var(--font-main);
+}
+
+/* Карусель */
+
+.carousel {
+  grid-column: 1 / 16;
+
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  column-gap: 16px;
+
+  margin-top: 80px;
+}
+
+.carousel img {
+  grid-column: span 3;
+
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.carousel {
+  grid-column: 1 / 19;
+
+  width: 100%;
+  overflow: hidden;
+
+  margin-top: 80px;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+
+  animation: carousel-scroll 30s linear infinite;
+}
+
+/* .carousel__track img {
+    width: 280px;
+    height: 280px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+    display: block;
+} */
+
+@keyframes carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+/* DESCRIPTION */
+
+.description-thoroughly__container {
+  padding-top: 96px;
+}
+
+.description-thoroughly__title {
+  color: rgb(255, 255, 255);
+  margin-bottom: 36px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+}
+
+.description-thoroughly__title::before {
+  content: "—  ";
+}
+
+.txt-li {
+    position: relative;
+    padding-left: 45px;
+    padding-bottom: 5px;
+    font-family: var(--font-photo);
+    color: rgb(141, 140, 140);
+}
+
+.txt-li::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 1px;
+    background-color: #aaa;
+}
+
+.txt-ul{
+    margin-top: 28px;
+    font-size: 20px;
+}
+
+.capabilities__desc{
+    font-size: 20px;
+    color: rgb(141, 140, 140);
+    font-family: var(--font-photo);
+}
+
+.listing-list {
+  color: white;
+  text-decoration: none;
+  padding-top: 20px;
+  /* text-decoration-style: none; */
+  list-style: none;
+  border-top: 0.5px solid rgb(255, 255, 255, 0.2);
+}
+
+.listing {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 56px;
+  column-gap: 36px;
+}
+
+.capabilities__title {
+  font-family: "SFT Schrifted";
+  font-size: 22px;
+  margin-bottom: 6px;
+}
