@@ -19,7 +19,10 @@
     <link rel="stylesheet" href="css_files/adaptive/footer-adaptive.css" />
     <link rel="stylesheet" href="css_files/module-window.css" />
     <link rel="stylesheet" href="css_files/adaptive/module-window.css" />
-    <link rel="stylesheet" href="css_files/adaptive/succes-module-adaptive.css">
+    <link
+      rel="stylesheet"
+      href="css_files/adaptive/succes-module-adaptive.css"
+    />
 
     <link
       rel="shortcut icon"
@@ -27,9 +30,12 @@
       type="image/x-icon"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -143,7 +149,7 @@
         <div class="photo__container">
           <!-- CONTENT -->
           <div class="photo__content">
-            <h1>Простой способ построить свой успех</h1>
+            <h1 id="hero-title">Простой способ построить свой успех</h1>
 
             <a class="photo__content-link" href="request.html"
               >Рассчитать стоимость</a
@@ -261,11 +267,7 @@
           <div class="projects__list">
             <!-- 1 -->
             <article class="projects__item">
-              <img
-                src="Images/houseee.jpg"
-                alt=""
-                class="projects__image"
-              />
+              <img src="Images/houseee.jpg" alt="" class="projects__image" />
               <a
                 href="projectInDetails.html"
                 class="services__name services__name-adaptive"
@@ -419,6 +421,18 @@
     </div>
     <script src="js/callback.js"></script>
     <script src="js/sidebar.js"></script>
+    <!-- СMS -->
+    <script>
+      fetch("content/home.json")
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("hero-title").textContent = data.hero_title;
+        })
+        .catch((error) => {
+          console.error("Не удалось загрузить текст главной страницы:", error);
+        });
+    </script>
+
     <!-- <script src="js/request.js"></script> -->
   </body>
 </html>
