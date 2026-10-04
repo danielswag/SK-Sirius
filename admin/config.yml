@@ -3,6 +3,30 @@
 #   repo: danielswag/SK-Sirius
 #   branch: master
 
+# backend:
+#   name: turbo-github
+#   repo: danielswag/SK-Sirius
+#   branch: master
+#   site_id: d8b89626-a492-4a31-850a-4572798a3c66
+
+# media_folder: "Images"
+# public_folder: "/Images"
+
+# collections:
+#   - name: "pages"
+#     label: "Страницы сайта"
+#     files:
+#       - name: "home"
+#         label: "Главная страница"
+#         file: "content/home.json"
+#         fields:
+#           - {
+#               label: "Заголовок главного экрана",
+#               name: "hero_title",
+#               widget: "string",
+#             }
+# - { label: "Описание", name: "description", widget: "text" }
+
 backend:
   name: turbo-github
   repo: danielswag/SK-Sirius
@@ -20,9 +44,6 @@ collections:
         label: "Главная страница"
         file: "content/home.json"
         fields:
-          - {
-              label: "Заголовок главного экрана",
-              name: "hero_title",
-              widget: "string",
-            }
-          # - { label: "Описание", name: "description", widget: "text" }
+          - label: "Заголовок главного экрана"
+            name: "hero_title"
+            widget: "string"
