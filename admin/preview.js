@@ -1,4 +1,3 @@
-
 // CMS.registerPreviewTemplate(
 //   "home",
 //   createClass({
@@ -46,12 +45,19 @@
 //   })
 // );
 
-
 CMS.registerPreviewTemplate(
   "home",
   createClass({
     render() {
       const entry = this.props.entry;
+
+      const companyTitle =
+        entry.getIn(["data", "company_title"]) || "Мы — СК Сириус";
+
+      const companyDescription =
+        entry.getIn(["data", "company_description"]) ||
+        "Мы молодая компания, предоставляющая услуги по строительству и разработке проектов. Наша сила — уникальная сеть местных и международных навыков.";
+
       const title =
         entry.getIn(["data", "hero_title"]) ||
         "Простой способ построить свой успех";
@@ -227,7 +233,7 @@ CMS.registerPreviewTemplate(
                 font-size: 16px;
               }
             }
-          `
+          `,
         ),
 
         h(
@@ -241,11 +247,7 @@ CMS.registerPreviewTemplate(
               "div",
               { className: "photo__content" },
               h("h1", null, title),
-              h(
-                "a",
-                { href: "/request.html" },
-                "Рассчитать стоимость"
-              )
+              h("a", { href: "/request.html" }, "Рассчитать стоимость"),
             ),
 
             h(
@@ -257,16 +259,16 @@ CMS.registerPreviewTemplate(
                   className: "email__content-link",
                   href: "mailto:SkSirius@su10.ru",
                 },
-                "SkSirius@su10.ru"
-              )
+                "SkSirius@su10.ru",
+              ),
             ),
 
             h("img", {
               src: "/Images/Fone.png",
               alt: "",
               className: "image__photo",
-            })
-          )
+            }),
+          ),
         ),
 
         h(
@@ -275,20 +277,13 @@ CMS.registerPreviewTemplate(
           h(
             "div",
             { className: "hero__container" },
-            h(
-              "h2",
-              { className: "hero__title" },
-              "Мы — СК Сириус"
-            ),
-            h(
-              "div",
-              { className: "hero__desc" },
-              "Мы молодая компания, предоставляющая услуги по строительству и разработке проектов. Наша сила — уникальная сеть местных и международных навыков."
-            )
-          )
-        )
+
+            h("h2", { className: "hero__title" }, companyTitle),
+
+            h("div", { className: "hero__desc" }, companyDescription),
+          ),
+        ),
       );
     },
-  })
+  }),
 );
-

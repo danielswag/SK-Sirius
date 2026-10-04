@@ -47,3 +47,11 @@ collections:
           - label: "Заголовок главного экрана"
             name: "hero_title"
             widget: "string"
+
+          - label: "Загололовок о компании"
+            name: "company_title"
+            widget: "string"
+
+          - label: "Описание компании"
+            name: "company_description"
+            widget: "text"
