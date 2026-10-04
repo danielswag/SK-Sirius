@@ -5,6 +5,7 @@ CMS.registerPreviewTemplate(
     render() {
       const entry = this.props.entry;
       const title = entry.getIn(["data", "hero_title"]) || "";
+      console.log("PREVIEW RENDERED", title);
 
       return h(
         "div",
