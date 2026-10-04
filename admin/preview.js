@@ -1,6 +1,6 @@
 
 CMS.registerPreviewTemplate(
-  "pages",
+  "home",
   createClass({
     render() {
       const entry = this.props.entry;
